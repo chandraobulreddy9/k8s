@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-init
+spec:
+  containers:
+    - name: main-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+  initContainers:
+    - name: init-container
+      image: busybox:latest
+      command: ["sh", "-c", "echo 'Init container is running'; sleep 5"]
