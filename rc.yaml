@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-dep
-  namespace: default
 spec:
   replicas: 3
   strategy:
@@ -16,7 +15,7 @@ spec:
         app: hello-dep
     spec:
       containers:
-      - image: nginx
+      - image: amitow/nginx:v1
         imagePullPolicy: Always
         name: hello-dep
         ports:
