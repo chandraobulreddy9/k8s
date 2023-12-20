@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: affinitypod
+  labels:
+    app: db
+    role: master
+spec:
+  containers:
+  - name: my-container
+    image: amitow/nginx:v1

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: antiaffinitypod
+  labels:
+    app: db
+spec:
+  containers:
+  - name: my-container
+    image: amitow/nginx:v1
